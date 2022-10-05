@@ -5,6 +5,7 @@ using namespace std;
 
 FGoblin::FGoblin()
 {
+	Type = "Goblin"; 
 	cout << "Goblin 생성자" << endl;
 
 	Gold = 0;
@@ -12,24 +13,7 @@ FGoblin::FGoblin()
 	Direction = 0;
 }
 
-void FGoblin::Move()
+FGoblin::~FGoblin()
 {
-	cout << "Goblin 이동한다." << endl;
-}
-
-void FGoblin::Attack()
-{
-	cout << "Goblin 공격한다." << endl;
-
-}
-
-void FGoblin::Dead()
-{
-	cout << "Goblin 죽는다." << endl;
-
-}
-
-void FGoblin::DecreaseHP()
-{
-	cout << "Goblin HP 줄어든다." << endl;
+	cout << "Goblin 소멸자" << endl;
 }

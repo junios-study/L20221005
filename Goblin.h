@@ -1,16 +1,10 @@
 #pragma once
-class FGoblin
+#include "Character.h"
+
+class FGoblin : public FCharacter
 {
 public:
 	FGoblin();
-
-	int Gold;
-	int HP;
-	int Direction;
-
-	void Move();
-	void Attack();
-	void Dead();
-	void DecreaseHP();
+	~FGoblin();
 };
 
