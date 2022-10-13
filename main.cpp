@@ -1,32 +1,27 @@
 #include <iostream>
 #include "Player.h"
 #include "Goblin.h"
+#include "Slime.h"
+#include "Boar.h"
 
 using namespace std;
 
+//public
+// 공개,    상속 O
+//protected
+// 공개 X,  상속 O
+//private
+// 공개 X,  상속 X
 
-int main()
+
+int main() //entry point
 {
-	FPlayer* MyPlayer = new FPlayer();
 
-	MyPlayer->Move();
+	FPlayer Player;
+	Player.MyMesh.Load();
 
-	FGoblin* Goblin = new FGoblin();
-	Goblin->Move();
-
-	//bool IsRunning = true;
-
-	//while (IsRunning)
-	//{
-	//	MyPlayer->Move();
-	//	Goblin->Move();
-	//}
-
-	delete MyPlayer;
-	MyPlayer = nullptr;
-
-	delete Goblin;
-	Goblin = nullptr;
+	FGoblin Goblin;
+	Goblin.MyMesh.Load();
 
 	return 0;
 }

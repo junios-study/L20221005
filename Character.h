@@ -3,11 +3,29 @@
 
 using namespace std;
 
-class FCharacter
+class Mesh
 {
 public:
+	void Load()
+	{
+
+	}
+};
+
+class FCharacter
+{
+public: //이건 상속
 	FCharacter();
 	~FCharacter();
+
+	void Move();
+	void Attack();
+	void Dead();
+
+	Mesh MyMesh;
+	 
+protected: // 이건 상속 안해주는거
+	void DecreaseHP();
 
 	int Gold;
 	int HP;
@@ -15,9 +33,7 @@ public:
 
 	string Type;
 
-	void Move();
-	void Attack();
-	void Dead();
-	void DecreaseHP();
+//private:
+//	int Test;
 };
 

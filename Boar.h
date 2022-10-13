@@ -1,7 +1,11 @@
 #pragma once
-class FBoar
+#include "Character.h"
+
+
+class FBoar : public FCharacter
 {
 public:
 	FBoar();
+	~FBoar();
 };
 
